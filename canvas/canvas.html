@@ -1,0 +1,155 @@
+
+<!-- 
+1、首先，找到 <canvas> 元素:
+var c=document.getElementById("myCanvas");
+2、然后，创建 context 对象：
+var ctx=c.getContext("2d");
+getContext("2d") 对象是内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+
+API说明：
+fillStyle属性可以是CSS颜色，渐变，或图案。fillStyle 默认设置是#000000（黑色）。
+fillRect(x,y,width,height) 方法定义了矩形当前的填充方式。
+
+画线：
+在Canvas上画线，我们将使用以下两种方法：
+moveTo(x,y) 定义线条开始坐标
+lineTo(x,y) 定义线条结束坐标
+然后使用 stroke() 方法来绘制线条
+
+
+画文本：
+使用 canvas 绘制文本，重要的属性和方法如下：
+font - 定义字体
+fillText(text,x,y) - 在 canvas 上绘制实心的文本
+strokeText(text,x,y) - 在 canvas 上绘制空心的文本
+
+
+画圆：
+在画圆的时候，使用下面的方法
+arc(x,y,r,start,stop)
+画布的左上角坐标为0,0
+ x：圆心在x轴上的坐标
+ y：圆心在y轴上的坐标
+ r：半径长度
+ start：起始角度，以弧度表示，圆心平行的右端为0度
+ stop：结束角度，以弧度表示
+注意：Math.PI表示180°，画圆的方向是顺时针
+
+
+Canvas - 渐变
+渐变可以填充在矩形, 圆形, 线条, 文本等等, 各种形状可以自己定义不同的颜色。
+
+以下有两种不同的方式来设置Canvas渐变：
+createLinearGradient(x,y,x1,y1) - 创建线条渐变
+createRadialGradient(x,y,r,x1,y1,r1) - 创建一个径向/圆渐变
+
+当我们使用渐变对象，必须使用两种或两种以上的停止颜色。
+addColorStop(Index，Color)方法指定颜色停止，参数Index使用坐标来描述，可以是0至1.
+
+使用渐变，设置fillStyle或strokeStyle的值为 渐变，然后绘制形状，如矩形，文本，或一条线。
+
+制作径向渐变时 context.createRadialGradient(x , y , r , x1 , y1 , r1) 括号内参数含义如下:
+
+ x: 渐变的开始圆的 x 坐标
+ y: 渐变的开始圆的 y 坐标
+ r: 开始圆的半径
+ x1: 渐变的结束圆的 x 坐标
+ y1: 渐变的结束圆的 y 坐标
+ r1: 结束圆的半径
+(x, y, r) (x1,y1,r1)分别可以代表一个圆形的特征, 个人感觉通常情况下(x,y) 和 (x1,y1)简单地相同即可(即同心圆), 这样做出来的径向渐变已经十分美观,符合大众审美观。
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画布</title>
+	<link rel="stylesheet" type="text/css" href="canvas.css">
+</head>
+<body>
+	<div class="div1"><!-- 按钮 -->
+		<button onclick="makeRectangle()">矩形</button>
+		<button onclick="makeLine()">线条</button>
+		<button onclick="makeCircle()">圆</button>
+		<button onclick="makeWord(true)">实心文本</button>
+		<button onclick="makeWord(false)">空心文本</button>
+		<button onclick="makeLinearGradient()">线条渐变色</button>
+		<button onclick="makeRadialGradient()">径向/圆渐变色</button>
+	</div>
+	<br>
+	<!-- 画布 -->
+	<div class="div2">
+		<canvas id="cas1" width="300" height="300"></canvas>
+		<canvas id="cas2" width="300" height="300"></canvas>
+		<canvas id="cas3" width="300" height="300"></canvas>
+		<canvas id="cas4" width="300" height="300"></canvas>
+		<canvas id="cas5" width="300" height="300"></canvas>
+		<canvas id="cas6" width="300" height="300"></canvas>
+	</div>
+
+	<script type="text/javascript">
+		// 矩形
+		function makeRectangle() {
+			var cas = document.getElementById('cas1');
+			var cxt = cas.getContext("2d");
+			cxt.fillStyle = "#FF0000";
+			cxt.fillRect(50,50,200,100);
+		}
+		// 线条
+		function makeLine() {
+			var cas = document.getElementById('cas2');
+			var cxt = cas.getContext("2d");
+			cxt.moveTo(150,10);
+			cxt.lineTo(10,280);
+			cxt.lineTo(280,280);
+			cxt.lineTo(150,10);
+			cxt.stroke();
+		}
+		// 圆
+		function makeCircle() {
+			var cas = document.getElementById("cas3")
+			var cxt = cas.getContext("2d");
+			cxt.beginPath();
+			cxt.arc(150,150,100,0,Math.PI*2,true);
+			cxt.stroke();
+		}
+		// 文本
+		function makeWord(status) {
+			var cas = document.getElementById("cas4");
+			var cxt = cas.getContext("2d");
+			cxt.font = "60px Arial";
+			cxt.textColor = "red";
+			if (status == true) {
+				cxt.fillText("中国", 80,50);
+			} else {
+				cxt.strokeText("中国", 80,150);
+			}
+		}
+		// 线条渐变色
+		function makeLinearGradient() {
+			var cas = document.getElementById("cas5");
+			var cxt = cas.getContext("2d");
+			var grd = cxt.createLinearGradient(50,100,200,100);
+			grd.addColorStop(0,"#48D1CC");
+			grd.addColorStop(1,"#00FF7F");
+			cxt.fillStyle = grd;
+			cxt.fillRect(50,100,200,100);
+		}
+		// 径向/圆渐变色
+		function makeRadialGradient() {
+			var cas = document.getElementById("cas6");
+			var ctx = cas.getContext("2d");
+			// 创建径向渐变
+			var grd=ctx.createRadialGradient(150,150,5,150,150,100);
+			grd.addColorStop(0,"#F4A460");
+			grd.addColorStop(1,"#fff");
+			// 填充渐变
+			ctx.fillStyle=grd;
+			ctx.fillRect(50,50,250,250);
+		}
+	</script>
+
+
+</body>
+</html>

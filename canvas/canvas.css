@@ -1,0 +1,42 @@
+.div1 {
+	text-align: center;
+}
+.div2 {
+	border: 1px dotted #000;
+	margin: 10px;
+	position: absolute;
+}
+#cas1 {
+	border: 1px dashed #dc143c;
+	margin: 10px;
+	position: relative;
+}
+#cas2 {
+	border: 1px dashed purple;
+	margin: 10px;
+	position: relative;
+	
+}
+#cas3 {
+	border: 1px solid green;
+	margin: 10px;
+	position: relative;
+}
+#cas4 {
+	border: 1px solid blue;
+	margin: 10px;
+	padding-top: 10px;
+	position: relative;
+}
+#cas5 {
+	border: 1px solid #f0f;
+	margin: 10px;
+	padding-top: 10px;
+	position: relative;
+}
+#cas6 {
+	border: 1px solid #7CFC00;
+	margin: 10px;
+	padding-top: 10px;
+	position: relative;
+}

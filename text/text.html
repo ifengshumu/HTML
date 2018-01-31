@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>车辆详情</title>
+
+</head>
+
+<body>
+    <div>
+        <!-- 登录 -->
+        <form action="login.php" method="post">
+            <label for="username">用户名:</label>
+            <input type="text" name="username" id="username" value="" placeholder="请输入用户名">
+            <br>
+            <label for="pass">密&nbsp;&nbsp;码：</label>
+            <input type="password" name="pass" id="pass" placeholder="请输入密码">
+            <input type="submit" name="submit" value="登录">
+
+            <br>
+            <input type="checkbox" name="checkbox" value="">
+            <label style="font-size: 10px" for="rember">记住密码</label>
+            <label style="font-size: 10px; padding-left: 60px" for="forget"><a href="http://www.cheok.com" target="_blank">忘记密码？</a></label>
+        </form>
+        <!-- 反馈 -->
+        <form style="padding-top: 10px" action="feedback.php" method="post">
+            <textarea name="feedback" id="feedback" cols="50" rows="10" placeholder="请输入您的意见和建议"></textarea>
+        </form>
+        <!-- 选择 -->
+        <form action="select.php" method="post">
+            <label for="like">请选择你喜欢的运动</label>
+            <br>
+            <input type="checkbox" name="a1" value="跑步"> 跑步
+            <input type="checkbox" name="a2" value="游泳"> 游泳
+            <input type="checkbox" name="a3" value="打羽毛球" checked="checked"> 打羽毛球
+            <input type="checkbox" name="a4" value="登山"> 登山
+        </form>
+        <!-- 下拉选择 -->
+        <form action="select.php" method="post" style="padding-top: 10px">
+            <label for="activity">运动</label>
+            <select name="activity" id="activity">
+                <option value="跑步">跑步</option>
+                <option value="游泳">游泳</option>
+                <option value="打羽毛球" selected="selected">打羽毛球</option>
+                <option value="登山">登山</option>
+            </select>
+        </form>
+    </div>
+    <address>中国 杭州市 拱墅区 祥园路88号 中国（杭州）智慧信息产业园N座10层</address>
+    <img style="padding-top: 10px" src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg" width="490px" height="400px">
+    <div style="line-height: 10px; padding-left: 15px">
+        <p>奔驰 GLC 2016款 GLC 260 4MATIC 豪华型</p>
+        <p style="color: gray line-height:5">车源地：浙江-杭州市</p>
+        <p style="color: red">36.00万
+            <del style="color: gray">新车含税44.30万</del>
+        </p>
+    </div>
+    <div style="background-color: #e2e2e2; height: 1px; width: 500px"></div>
+    <!-- 车商信息 -->
+    <div style="padding-top: 10px; padding-left: 15px">
+        <img style="float: left" src="cust_photo@3x.png" width="55px" height="55px" alt="">
+        <div style="float: left; line-height: 5px; font-size: 10px; padding-left: 10px">
+            <p>高凯琳</p>
+            <p>杭州天下行</p>
+            <p>杭州</p>
+        </div>
+    </div>
+    <div style="float: left;background-color: #e2e2e2; height: 10px; width: 500px"; padding-bottom: 10px></div>
+    <div style="float: left; padding-left: 30px; padding-top: 10px">
+        <img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg" width="400px" height="400px">
+        <img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg" width="400px" height="400px">
+        <img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg" width="400px" height="400px">
+        <img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg" width="400px" height="400px">
+        <img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg" width="400px" height="400px">
+    </div>
+</body>
+
+</html>
