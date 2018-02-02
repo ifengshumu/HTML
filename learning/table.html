@@ -1,36 +1,121 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>This is a HTML title</title>
-    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="/learning/table.css">
 </head>
 
 <body>
-    <p class="mc">E=MC<sup>2</sup></p>
-    <p id="co">H<sub>2</sub>O和CO<sub>2</sub>是人类不可缺少的！</p>
+    <div>
+        <p class="mc">E=MC
+            <sup>2</sup>
+        </p>
+        <p id="co">H
+            <sub>2</sub>O和CO
+            <sub>2</sub>是人类不可缺少的！</p>
+    </div>
     <hr>
 
-    <!-- 表格<table> 行<tr> 列<td>..</td> </tr> </table> -->
-<!--快捷建表：tabel>tr*3>td*3 按tab建  -->
-<table border="5px" bordercolor="red" width="500px" height="100px" cellpadding="10px" cellspacing="10px" align="center">
-    <tr>
-        <td>学号</td>
-        <td>姓名</td>
-        <td>性别</td>
-    </tr>
-    
-    <tr>
-        <td>1001</td>
-        <td>李雷</td>
-        <td>男</td>
-    </tr>
-    <tr>
-        <td>1002</td>
-        <td>韩梅梅</td>
-        <td>女</td>
-    </tr>
-</table>
+    <!-- 表格<table> 
+        caption:表格标题
+        表格的表头使用 <th> 标签进行定义。大多数浏览器会把表头显示为粗体居中的文本：
+        行<tr> 
+        列<td>
+    -->
+    <!--快捷建表：tabel>tr*3>td*3 按tab建  -->
+    <table border="5px" bordercolor="red" width="500px" height="100px" cellpadding="10px" cellspacing="10px" align="center">
+        <caption>班级花名册</caption>
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>李雷</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>1002</td>
+            <td>韩梅梅</td>
+            <td>女</td>
+        </tr>
+    </table>
 
+    <h4>单元格跨两列：</h4>
+    <table border="1" width="500px" height="100px">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Chris Lee</td>
+            <td>888 888</td>
+            <td>999 999</td>
+        </tr>
+    </table>
+
+    <h4>单元格跨两行</h4>
+    <table border="1" width="500px" height="100px">
+        <tr>
+            <th>Name</th>
+            <td>Chris Lee</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>888 888</td>
+        </tr>
+        <tr>
+            <td>999 999</td>
+        </tr>
+    </table>
+
+    <h4>在表中显示不同的元素</h4>
+    <table border="1" width="500px" height="100px">
+        <!-- 第一行 -->
+        <tr>
+            <!-- 第一行 第一列 -->
+            <td>
+                <p>这是一张图片：</p>
+                <img src="/source/cover.png" alt="表格图像" width="50" height="50">
+            </td>
+            <!-- 第一行 第二列 -->
+            <td>
+                <p>这是一个表格：</p>
+                <table>
+                    <tr>
+                        <td>Today</td>
+                        <td>Yesterday</td>
+                    </tr>
+                    <tr>
+                        <td>Tomorrow</td>
+                        <td>Furture</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- 第二行 -->
+        <tr>
+            <!-- 第二行 第一列 -->
+            <td>
+                <p>这是一个列表：</p>
+                <ol>
+                    <li>Apple</li>
+                    <li>Google</li>
+                    <li>FaceBook</li>
+                </ol>
+            </td>
+            <!-- 第二行 第二列 -->
+            <td>Hello World</td>
+        </tr>
+    </table>
+    <hr>
+    <a href="/learning/beautifulTable.html" target="__blank1">美观表格</a>
+    <hr>
+    <a href="/learning/timeTable.html" target="__blank2">课程表</a>
+
+    
 </body>
 
 
