@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片</title>
+</head>
+<body>
+    <!-- 图像映射 
+    该段代码中的shape指的是点击区域的形状，coords指的应该是链接区域在图片中的坐标（像素为单位）
+    
+    1、距形：(左上角顶点坐标为(x1,y1)，右下角顶点坐标为(x2,y2))
+    <area shape="rect" coords="x1,y1,x2,y2" href=url>
+
+    2、圆形：(圆心坐标为(X1,y1)，半径为r)
+    <area shape="circle" coords="x1,y1,r" href=url>
+
+    3、多边形：(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......)
+    <area shape="poly" coords="x1,y1,x2,y2 ......" href=url>
+    -->
+    <p>点击BAT的logo：</p>
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517558665658&di=5bfd93c42bcadbd226710d22d250fe98&imgtype=0&src=http%3A%2F%2Fupload.iheima.com%2F2017%2F0328%2F1490693254911.jpg" alt="BAT" width="500" height="500" usemap="#batlogo">
+    <map name="batlogo">
+        <area shape="circle" coords="80,110,100" href="http://www.baidu.com" target="__blank0" alt="百度一下">
+        <area shape="rect" coords="180,10,330,220" href="http://www.taobao.com" target="__blank1" alt="淘一下，啥都有">
+    </map>
+</body>
+</html>

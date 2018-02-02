@@ -1,0 +1,35 @@
+#div1 {
+    padding: 20px;
+    border: 5px solid #EE872A;
+    border-radius: 5px;
+}
+.div2 {
+    opacity: 0.3;
+    background-color: bisque;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 50px;
+}
+#div3 {
+    opacity: 0.5;
+    background-color: aquamarine;
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    left: 150px;
+}
+.p1 {
+    letter-spacing: 12px;
+}
+.p2 {
+    color: coral;
+}
+#span1 {
+    background-color: #b4009e;
+    color: #ffffff;
+}
+#p3 {
+    color: deeppink;
+    font-size: 2em;
+}
