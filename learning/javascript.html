@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>脚本</title>
+</head>
+<body>
+    <h3>直接在HTML输出：</h3>
+    <noscript>抱歉，你的浏览器不支持JavaScript</noscript>
+    <p id="p"><strong>Tip：</strong>不支持JavaScript的浏览器会使用&lt;noscript&gt;元素中定义的内容（文本）来替代；<br>您只能在 HTML 输出流中使用 <strong>document.write</strong>，如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。</p>
+
+    <script type="text/javascript">
+    // 直接输出
+    document.write("Hello World!")
+    // 事件响应
+    function clickBtn() {
+        document.getElementById("btn").innerHTML = "你竟然点我！";
+    }
+    function changeStyle() {
+        document.getElementById("p").style.color = "#f00";
+    }
+    </script>
+    
+   
+    <hr>
+    <h3 id="head3">事件响应:</h3>
+    <button id="btn" onclick="clickBtn()">点我</button>
+    <button onclick="changeStyle()">改变样式</button>
+</body>
+</html>
