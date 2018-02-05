@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表</title>
+</head>
+
+<body>
+    <h3>无序列表：</h3>
+    <p>
+        <strong>注意：</strong> 在 HTML 4中 ul 属性已废弃，HTML5 已不支持该属性，因此我们使用 CSS 代替来定义不同类型的无序列表如下：</p>
+    <p>圆点列表</p>
+    <!-- 默认显示这种样式。一般不设置-->
+    <ul style="list-style-type:disc">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ul>
+    <p>圆圈列表</p>
+    <ul style="list-style-type:circle">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ul>
+    <p>正方形列表</p>
+    <ul style="list-style-type:square">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ul>
+    <hr>
+    <h3>有序列表：</h3>
+    <p>编号列表</p>
+    <ol>
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ol>
+    <p>以某个数字开始的编号列表</p>
+    <ol start="100">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ol>
+    <p>大写字母列表</p>
+    <ol type="A">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ol>
+    <p>小写字母列表</p>
+    <ol type="a">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ol>
+    <p>大写罗马数字列表</p>
+    <!-- 输入大写英文字母I即可 -->
+    <ol type="I">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ol>
+    <p>小写罗马数字列表</p>
+    <!-- 输入小写英文字母i即可 -->
+    <ol type="i">
+        <li>Apple</li>
+        <li>Google</li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+    </ol>
+    <hr>
+    <h3>嵌套列表：</h3>
+    <p>两层嵌套</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea
+            <ul>
+                <li>Black Tea</li>
+                <li>Green Tea</li>
+            </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+    <p>三层嵌套</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea
+            <ul>
+                <li>Black Tea</li>
+                <li>Green Tea</li>
+                <ul>
+                    <li>China</li>
+                    <li>Africa</li>
+                </ul>
+            </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+    <p>有序无序嵌套</p>
+    <ol>
+        <li>水果
+            <ul>
+                <li>苹果</li>
+                <li>香蕉</li>
+            </ul>
+        </li>
+        <li>牛奶
+            <ul>
+                <li>蒙牛</li>
+                <li>伊利</li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h3>自定义列表</h3>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>-black hot drink</dd>
+        <dt>Tea</dt>
+        <dd>-green hot drink</dd>
+    </dl>
+</body>
+
+</html>

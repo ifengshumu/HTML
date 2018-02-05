@@ -1,0 +1,16 @@
+.tip1 {
+    font-size: 60%;
+}
+#rpas {
+    font-size: 10px
+}
+#fpas {
+    font-size: 10px; 
+    padding-left: 80px
+}
+#login {
+    display:block;
+    height:180px;
+    width:200px;
+    
+}
