@@ -21,7 +21,8 @@
             <br>
             <input type="checkbox" name="checkbox" checked="checked">
             <label id="rpas" for="rember">记住密码</label>
-            <label id="fpas" for="forget"> <a href="http://www.cheok.com" target="_blank" style="text-decoration:none">忘记密码？</a>
+            <label id="fpas" for="forget">
+                <a href="http://www.cheok.com" target="_blank" style="text-decoration:none">忘记密码？</a>
             </label>
             <br>
             <input id="login" type="button" name="submit" value="登录">
@@ -31,9 +32,12 @@
     <form action="">
         <fieldset id="field">
             <legend>Personal information:</legend>
-            Name：<input type="text" size="30"><br>
-            Email：<input type="email" name="mail" id="m"><br>
-            Date of brith：<input type="date" name="d" id="d">
+            Name：
+            <input type="text" size="30">
+            <br> Email：
+            <input type="email" name="mail" id="m">
+            <br> Date of brith：
+            <input type="date" name="d" id="d">
         </fieldset>
     </form>
     <h3>文本域(textarea)：</h3>
@@ -70,10 +74,119 @@
     <hr>
     <h3>发邮件</h3>
     <form action="mailto:zmc@cheok.com" method="post">
-        Content：<br>
-        <textarea name="content" id="" cols="30" rows="10"></textarea><br>
+        Content：
+        <br>
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+        <br>
         <input type="submit" value="发送">
     </form>
+
+    <hr>
+    <h4>HTML5 新的表单属性:</h4>
+    <p>HTML5 的 &lt;form&gt; 和 &lt;input&gt;标签添加了几个新属性.</p>
+    <p>&lt;form&gt;新属性：</p>
+    <li>autocomplete</li>
+    <li>novalidate</li>
+    <p>&lt;input&gt;新属性:</p>
+    <li>autocomplete</li>
+    <li>autofocus</li>
+    <li>form</li>
+    <li>formaction</li>
+    <li>formenctype</li>
+    <li>formmethod</li>
+    <li>formnovalidate</li>
+    <li>formtarget</li>
+    <li>height 与 width</li>
+    <li>list</li>
+    <li>min 与 max</li>
+    <li>multiple</li>
+    <li>pattern (regexp)</li>
+    <li>placeholder</li>
+    <li>required</li>
+    <li>step</li>
+    <hr>
+    <!-- <form> / <input> autocomplete 属性 -->
+    <p>
+        <strong>&lt;form&gt; / &lt;input&gt; autocomplete 属性</strong>
+        <br> autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。
+        <br> 当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项。
+        <br> 提示: autocomplete 属性有可能在 form元素中是开启的，而在input元素中是关闭的。
+        <br> 注意: autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, datepickers,
+        range 以及 color。
+    </p>
+    <form action="demo-form.php" autocomplete="on" id="auto">
+        First name:
+        <input type="text" name="fname">
+        <br> Last name:
+        <input type="text" name="lname">
+        <br> E-mail:
+        <input type="email" name="email" autocomplete="off">
+        <br>
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- <form> novalidate 属性 -->
+    <p>
+        <strong>&lt;form&gt; novalidate 属性</strong>
+        <br> novalidate 属性是一个 boolean(布尔) 属性。
+        <br> novalidate 属性规定在提交表单时不应该验证 form 或 input 域。
+    </p>
+    <form action="demo-form.php" novalidate id="nov">
+        E-mail:
+        <input type="email" name="user_email">
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- <input> autofocus 属性 -->
+    <p>
+        <strong>&lt;input&gt; autofocus 属性</strong>
+        <br> autofocus 属性是一个 boolean 属性。
+        <br> autofocus 属性规定在页面加载时，域自动地获得焦点。
+    </p>
+    <form action="demo-form.php">
+        First name:
+        <input type="text" name="fname" autofocus>
+        <br> Last name:
+        <input type="text" name="lname">
+        <br>
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- <input> form 属性 -->
+    <p>
+        <strong>&lt;input&gt; form 属性</strong>
+        <br> form 属性规定输入域所属的一个或多个表单。
+        <br> 提示:如需引用一个以上的表单，请使用空格分隔的列表。
+    </p>
+    <form action="demo-form.php" id="form1">
+        First name:
+        <input type="text" name="fname">
+        <br>
+        <input type="submit" value="提交">
+    </form>
+    <p> "Last name" 字段没有在 form 表单之内，但它也是id为form1的表单的一部分，同时还是id为nov的表单的一部分。</p>
+    Last name:
+    <input type="text" name="lname" form="form1 nov">
+    <hr>
+    <!-- <input> formaction 属性 -->
+    <p>
+        <strong>&lt;input&gt; formaction 属性</strong>
+        The formaction 属性用于描述表单提交的URL地址。
+        <br> The formaction 属性会覆盖 &lt;form&gt; 元素中的action属性。
+        <br> 注意: The formaction 属性用于 type="submit" 和 type="image"。
+    </p>
+    <form action="demo-form.php">
+        First name:
+        <input type="text" name="fname">
+        <br> Last name:
+        <input type="text" name="lname">
+        <br>
+        <input type="submit" value="提交">
+        <br>
+        <input type="submit" formaction="demo-admin.php" value="提交">
+    </form>
+
+
 </body>
 
 </html>
