@@ -185,8 +185,131 @@
         <br>
         <input type="submit" formaction="demo-admin.php" value="提交">
     </form>
-
-
+    <hr>
+    <!-- <input> formenctype 属性 -->
+    <p>
+        <strong>&lt;input&gt; formenctype 属性</strong>
+        <br> formenctype 属性描述了表单提交到服务器的数据编码 (只对form表单中 method="post" 表单)
+        <br>formenctype 属性覆盖 form 元素的 enctype 属性。
+        <br>
+        <b>主要: </b> 该属性与 type="submit" 和type="image" 配合使用。
+    </p>
+    <form action="demo-post-enctype.php" method="post">
+        First name:
+        <input type="text" name="fname">
+        <br>
+        <input type="submit" value="提交">
+        <input type="submit" formenctype="multipart/form-data" value="以 Multipart/form-data 提交">
+    </form>
+    <hr>
+    <!-- <input> formmethod 属性 -->
+    <p>
+        <strong>&lt;input&gt; formmethod 属性</strong>
+        <br>formmethod 属性定义了表单提交的方式。
+        <br>formmethod属性覆盖了&lt;form&gt;元素的的method 属性。
+        <br>
+        <b>注意: </b> 该属性与 type="submit" 和type="image" 配合使用。
+    </p>
+    <form action="demo-form.php" method="get">
+        First name:
+        <input type="text" name="fname">
+        <br> Last name:
+        <input type="text" name="lname">
+        <br>
+        <input type="submit" value="提交">
+        <input type="submit" formmethod="POST" formaction="demo-post.php" value="使用 POST 提交">
+    </form>
+    <hr>
+    <!-- <input> list 属性 -->
+    <p>
+        <strong>&lt;input&gt; list 属性</strong>
+        <br>list 属性规定输入域的 datalist。datalist 是输入域的选项列表。
+    </p>
+    <form action="demo.php" method="get">
+        <input list="b" name="browsers">
+        <datalist id="b">
+            <option value="IE">IE</option>
+            <option value="Chrome"></option>
+            <option value="Safari"></option>
+        </datalist>
+    </form>
+    <hr>
+    <!-- <input> min和max 属性 -->
+    <p>
+        <strong>&lt;input&gt; min和max 属性</strong>
+        <br>
+        <b>注意: </b>min、max 和 step 属性适用于以下类型的&lt;input&gt;标签：date pickers、number 以及 range。
+    </p>
+    <form action="demo-form.php">
+        输入 1980-01-01 之前的日期:
+        <input type="date" name="bday" max="1979-12-31">
+        <br> 输入 2000-01-01 之后的日期:
+        <input type="date" name="bday" min="2000-01-02">
+        <br> 数量 (在1和5之间):
+        <input type="number" name="quantity" min="1" max="5">
+        <br>
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- <input> multiple 属性 -->
+    <p>
+        <strong>&lt;input&gt; multiple 属性</strong>
+        <br>multiple 属性是一个 boolean 属性.
+        <br>multiple 属性规定&lt;input&gt;元素中可选择多个值。
+        <br>
+        <b>注意: </b>multiple 属性适用于以下类型的
+        <input> 标签：email 和 file。
+    </p>
+    <form action="" method="post">
+        选择图片：
+        <input type="file" name="img" id="image" multiple>
+        <input type="submit" value="上传图片">
+    </form>
+    <hr>
+    <!-- <input> pattern 属性 -->
+    <p>
+        <strong>&lt;input&gt; pattern 属性</strong>
+        pattern 属性描述了一个正则表达式用于验证
+        <input> 元素的值。
+        <br>
+        <br>
+        <b>注意: </b>pattern 属性适用于以下类型的&lt;input&gt;标签: text, search, url, tel, email, 和 password.
+    </p>
+    <form action="demo-form.php">
+        Country code:
+        <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- <input> required 属性 -->
+    <p>
+        <strong>&lt;input&gt; required 属性</strong>
+        required 属性是一个 boolean 属性。
+        <br> required 属性规定必须在提交之前填写输入域（不能为空）。
+        <br>
+        <b>注意: </b>required 属性适用于以下类型的&lt;input&gt;标签：text, search, url, telephone, email, password, date pickers, number, checkbox,
+        radio 以及 file。
+    </p>
+    <form action="demo-form.php">
+        Username:
+        <input type="text" name="usrname" required>
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- <input> step 属性 -->
+    <p>
+        <strong>&lt;input&gt; step 属性</strong>
+        step 属性为输入域规定合法的数字间隔。
+        <br> 如果 step="3"，则合法的数是 -3,0,3,6 等
+        <br>
+        <b>提示: </b>step 属性可以与 max 和 min 属性创建一个区域值。
+        <br>
+        <b>注意: </b>step 属性与以下type类型一起使用: number, range, date, datetime, datetime-local, month, time 和 week.
+    </p>
+    <form action="demo-form.php">
+        <input type="number" name="points" step="3">
+        <input type="submit">
+    </form>
 </body>
 
 </html>
