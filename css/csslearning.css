@@ -1,0 +1,55 @@
+body {
+    /* 设置页面背景色 */
+    background-color: #d0e4fe;
+    /* 设置页面背景图片 */
+    background-image: url("./../source/cover.png");
+    /* 在水平方向重复背景图像 */
+    background-repeat: repeat-x;
+    /* 定位背景图像:右上角 */
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    /* 固定的背景图片 */
+    background-attachment: fixed;
+    /* 简写背景属性，顺序为：
+        background-color-设置元素的背景颜色。
+        background-image-把图像设置为背景。
+        background-repeat -设置背景图像是否及如何重复。
+        background-attachment -背景图像是否固定或者随着页面的其余部分滚动。
+        background-position - 设置背景图像的起始位置。
+    */
+    background: #5d9ab2 url("./../source/cover.png") no-repeat top left;
+    margin-left: 622px;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: olivedrab;
+    background-color: #b0c4de;
+}
+
+.ex {
+    color: rgba(0, 0, 255, 0.8);
+}
+
+/* 文本对齐 */
+p.date {
+    text-align: right;
+}
+
+p.main {
+    /* 首行缩进2个文字 */
+    text-indent: 2em;
+    /* 自动调整 */
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
