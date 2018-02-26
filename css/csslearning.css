@@ -2,7 +2,7 @@ body {
     /* 设置页面背景色 */
     background-color: #d0e4fe;
     /* 设置页面背景图片 */
-    background-image: url("./../source/cover.png");
+    background-image: url("../source/cover.png");
     /* 在水平方向重复背景图像 */
     background-repeat: repeat-x;
     /* 定位背景图像:右上角 */
@@ -50,6 +50,20 @@ p.main {
     text-align: justify;
 }
 
+/*移除下划线*/
 a {
     text-decoration: none;
 }
+
+.top {
+    text-decoration: overline;
+}
+
+.middle {
+    text-decoration: line-through;
+}
+
+.bottom {
+    text-decoration: underline;
+}
+
