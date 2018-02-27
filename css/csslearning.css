@@ -60,8 +60,7 @@ h1 {
 p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-    color: olivedrab;
-    background-color: #b0c4de;
+    background-color: #d4dae2;
 }
 
 .ex {
@@ -80,6 +79,7 @@ p.date {
     /* 当text-align设置为"justify"，每一行被展开为宽度相等，左，右外边距是对齐（如杂志和报纸）。*/
     text-align: justify;
     font-style: italic;
+    background-color: #d4dae2;
 }
 
 /*移除下划线*/
@@ -170,4 +170,50 @@ a:hover {
 a:active {
     color:purple;
     text-decoration: underline;
+}
+/* 边框样式 */
+.round {
+    border-style: solid;
+    border-width: 1px;
+    /* 如果边框颜色和文字颜色一致，可以不用设置 */
+    border-color: black;
+    /* 上面三个可以简写成下面 */
+    border: solid 1px black;
+}
+.redb {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: red;
+    /* 上面三个可以简写成下面 */
+    border-bottom: solid 1px red;
+}
+.circle {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+}
+.leftw {
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-left-color: blue;
+    background-color: aquamarine;
+}
+.rounddiff {
+    /* 顺序是：上、右、下、左 */
+    border-style: double ridge inset outset;
+    border-width: 2px 3pc 4px 5pt;
+    border-color: aquamarine firebrick forestgreen goldenrod;
+}
+/* list */
+
+ol {
+    list-style-type: none;
+    background-color: floralwhite;
+}
+/* 伪元素 */
+.main::first-letter {
+    width: 1.23em;
+    color: firebrick;
+    font-size: 200%;
+    line-height: 90%;
 }

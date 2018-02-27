@@ -10,24 +10,75 @@
 </head>
 
 <body>
-<h1>CSS实例</h1>
+    <h1>CSS实例</h1>
 
-<div>
-    下面的元素在&lt;div&gt;标签中。
-    <p>CSS是用来确定<strong class="ex">HTML</strong>样式的</p>
-    <p class="date">2018年2月26日</p>
-    <p class="main">
-        “当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</p>
-    <a class="baidu" href="http://www.baidu.com">百度一下</a>
-    <p class="top">上划线</p>
-    <p class="middle">中划线</p>
-    <p class="bottom">下划线</p>
-    <p class="caseup">This is some text.</p>
-    <p class="caselow">This is some text.</p>
-    <p class="casecap">This is some text.</p>
-    <p class="longtext">这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。 这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。 这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。 这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。 这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本.</p>
-
-</div>
+    <div>
+        下面的元素在&lt;div&gt;标签中。
+        <p>CSS是用来确定
+            <strong class="ex">HTML</strong>样式的</p>
+        <p class="date">2018年2月26日</p>
+        <p class="main">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</p>
+        <a class="baidu" href="http://www.baidu.com">百度一下</a>
+        <p class="top">上划线</p>
+        <p class="middle">中划线</p>
+        <p class="bottom">下划线</p>
+        <p class="caseup">This is some text.</p>
+        <p class="caselow">This is some text.</p>
+        <p class="casecap">This is some text.</p>
+        <p class="longtext">
+            <span>这</span>是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。 这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。 这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+            这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本.
+        </p>
+        <!-- 盒子模型 -->
+        <img src="./../source/css.png" alt="盒子模型">
+        <!-- 边框 -->
+        <img src="./../source/border.png" alt="边框样式">
+        <p class="round">四周都要边框</p>
+        <p class="redb">红色底部边框</p>
+        <p class="circle">圆角边框</p>
+        <p class="leftw">左侧边框带宽度，颜色为蓝色</p>
+        <p class="rounddiff">四周边框各不一样</p>
+        <!-- 轮廓 -->
+        <img src="./../source/outline2.png" alt="css轮廓">
+        <img src="./../source/outline.png" alt="outline属性">
+        <!-- 尺寸 -->
+        <img src="../source/dimension.png" alt="CSS尺寸">
+        <!-- 显隐性 -->
+        <img src="../source/hide1.png" alt="元素隐藏设置visibility">
+        <img style="margin-top: -5px" src="../source/hide2.png" alt="元素隐藏设置display">
+        <!-- 块级内联元素 -->
+        <img src="../source/block_inline.png" alt="块级元素和内联元素">
+        <img src="../source/pos1.png" alt="定位属性">
+        <img style="margin-top: -5px" src="../source/pos2.png" alt="定位属性">
+        <!-- 设置鼠标 -->
+        <p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+        <ol>
+            <li style="cursor:auto">auto</li>
+            <li style="cursor:crosshair">crosshair</li>
+            <li style="cursor:default">default</li>
+            <li style="cursor:e-resize">e-resize</li>
+            <li style="cursor:help">help</li>
+            <li style="cursor:move">move</li>
+            <li style="cursor:n-resize">n-resize</li>
+            <li style="cursor:ne-resize">ne-resize</li>
+            <li style="cursor:nw-resize">nw-resize</li>
+            <li style="cursor:pointer">pointer</li>
+            <li style="cursor:progress">progress</li>
+            <li style="cursor:s-resize">s-resize</li>
+            <li style="cursor:se-resize">se-resize</li>
+            <li style="cursor:sw-resize">sw-resize</li>
+            <li style="cursor:text">text</li>
+            <li style="cursor:w-resize">w-resize</li>
+            <li style="cursor:wait">wait</li>
+        </ol>
+        <!-- 浮动布局 -->
+        <img src="../source/float.png" alt="浮动布局">
+        <!-- 组合选择器 -->
+        <img src="../source/sel_1.png" alt="组合选择器">
+        <!-- 伪类/元素 -->
+        <img src="../source/fake_1.png" alt="伪类/元素">
+        <img style="margin-top: -5px" src="../source/fake_2.png" alt="伪类/元素">
+    </div>
 
 
 </body>
