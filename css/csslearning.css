@@ -217,3 +217,75 @@ ol {
     font-size: 200%;
     line-height: 90%;
 }
+/* 下拉菜单 */
+.drop {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color:green;
+    color: white;
+    border: none;
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    /* 鼠标样式 */
+    cursor: pointer;
+    
+}
+.drop-cnt {
+    /* 隐藏下拉菜单 */
+    display: none;
+    width: 120px;
+    /* padding-left: -10px; */
+    margin-top: -60px;
+    background-color:honeydew;
+    /* 设置显示方向 */
+    position: absolute;
+    right: 105%;
+    z-index: 1;
+    
+    /* 设置阴影 */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* 淡入 - 1秒内从 0% 到 100% 显示 */
+    opacity: 0;
+    transition: opacity 1s;
+}
+.drop-cnt a {
+    color: #000;
+    border: none;
+    text-decoration: none;
+    /* 设置此属性可以使下拉菜单内容竖向排列 */
+    display: block;
+
+}
+.drop-cnt a:hover {
+    background-color: darkturquoise;
+    color: white;
+}
+.drop:hover .drop-cnt {
+    /* 鼠标放在菜单按钮上时显示 */
+    display: block;
+    opacity: 1;
+}
+/* 添加箭头 */
+.drop-cnt::after {
+    content: "";
+    position: absolute;
+    /* 改变箭头方向 */
+    left: 100%;
+    top: 50%;
+    margin-left: 0px;
+    border-style: solid;
+    border-width: 5px;
+    /* 设置箭头颜色，上右下左 */
+    border-color: transparent transparent transparent yellow;
+}
+/* 透明度 */
+img {
+    opacity: 0.4;
+}
+img:hover {
+    opacity: 1;
+}
+
