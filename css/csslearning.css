@@ -283,9 +283,111 @@ ol {
 }
 /* 透明度 */
 img {
-    opacity: 0.4;
+    opacity: 0.88;
 }
 img:hover {
     opacity: 1;
 }
 
+/* 线性渐变-从上到下 */
+.grad1 {
+    height: 200px;
+    /* background: -webkit-linear-gradient(red, yellow);
+    background: -o-linear-gradient(red, yellow);
+    background: -moz-linear-gradient(red, yellow); */
+    background: linear-gradient(red, yellow);
+}
+/* 线性渐变-从左到右 */
+.grad2 {
+    height: 200px;
+    margin-top: 5px;
+    background: linear-gradient(to right, red, yellow);
+}
+/* 线性渐变-从左上角到右下角 */
+.grad3 {
+    height: 200px;
+    margin-top: 5px;
+    background: linear-gradient(to bottom right, green, yellow);
+}
+/* 线性渐变-角度（箭头朝上逆时针转动）
+0deg：从下到上渐变；
+90deg：从左到右渐变；
+180deg：从上到下渐变；
+-90deg：从右到左渐变；
+*/
+.grad4 {
+    height: 100px;
+    margin-top: 5px;
+    background: linear-gradient(-90deg, blue, red);
+}
+/* 线性渐变-多个颜色均匀分布 */
+.grad5 {
+    height: 300px;
+    margin-top: 10px;
+    background: linear-gradient(red, green, blue);
+}
+/* 线性渐变-多个颜色不均匀分布 */
+.grad6 {
+    height: 300px;
+    margin-top: 10px;
+    background: linear-gradient(red 30%, green 50%, blue 80%);
+}
+/* 线性渐变- 带透明度*/
+.grad7 {
+    height: 300px;
+    margin-top: 10px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+}
+/* 线性渐变- 重复的*/
+.grad8 {
+    height: 200px;
+    margin-top: 10px;
+    background: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+/* 径向渐变 
+background: radial-gradient(center, shape size, start-color, ..., last-color);
+center:渐变的中心，默认是中心，可以用两个百分数标识渐变中心；
+shape size:形状，默认是elipse（椭圆）
+*/
+.grad9 {
+    height: 400px;
+    margin-top: 20px;
+    background: radial-gradient(50% 60%, blue, green, yellow, black);
+}
+/* 过渡 */
+#guodu1 {
+    height: 200px;
+    width: 100px;
+    background: chocolate;
+    transition: width 2s;
+}
+#guodu1:hover {
+    width: 100%;
+}
+#guodu2 {
+    height: 200px;
+    width: 100px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+}
+#guodu2:hover {
+    width: 500px;
+    height: 300px;
+    transform: rotate3d(100, 20, 50, 170deg);
+}
+/* 动画 */
+@keyframes myani {
+    from {
+        width: 100px;
+        height: 200px;
+        background: red;
+    }
+    to {
+        width: 100%;
+        height: 300px;
+        background: rebeccapurple;
+    }
+}
+.donghua {
+    animation: myani 3s;
+}
