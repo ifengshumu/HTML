@@ -391,3 +391,12 @@ shape size:形状，默认是elipse（椭圆）
 .donghua {
     animation: myani 3s;
 }
+/* 多列 */
+.main {
+    column-count: 3;
+    column-rule-width: 2px;
+    column-rule-style: dashed;
+    column-rule-color: purple;
+     /*上面三个属性可以简写  */
+    column-rule: 2px dashed purple;
+}
