@@ -1,0 +1,13 @@
+.timeBtn {
+    background-color: palegreen;
+    border: none;
+    border-radius: 8px;
+}
+button {
+    display: block;
+    margin-top: 5px;
+}
+img {
+    display: block;
+    margin-top: 5px;
+}
