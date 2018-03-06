@@ -52,7 +52,83 @@ function myObject(name,nation) {
     alert(cars.length);
 
 }
+//判断是否是数组-自动调用
+(
+    function isArray(arrayObject) {
+        if (arrayObject instanceof Array) {
+            console.log(true);
+            return true;
+        } else {
+            console.log(false);
+            return false;
+        }
+    }
+)();
 
-function isArray(arrayObject) {
-    return arrayObject instanceof Array;
+//正则表达式-检索
+function mySearch() {
+    let str = "www.cheOk.com";
+    let index = str.search(/cheok/i);//如果不区分大小写：/检索文字/i;反之用双引号括起来。
+    alert(index);
+}
+//正则表达式-替换
+function myReplace() {
+    let old = document.getElementById("rep").innerHTML;
+    let newO = old.replace(old,"AliBaBa");
+    let newT = old.replace(/tencent/i,"AliBaBa");
+    console.log(newT===newO);
+    document.getElementById("rep").innerHTML = newT;
+}
+/*是否带有小数*/
+function    isDecimal(strValue )  {
+    var  objRegExp= /^\d+\.\d+$/;
+    return  objRegExp.test(strValue);
+}
+
+/*校验是否中文名称组成 */
+function ischina(str) {
+    var reg=/^[\u4E00-\u9FA5]{2,4}$/;   /*定义验证表达式*/
+    return reg.test(str);     /*进行验证*/
+}
+
+/*校验是否全由8位数字组成 */
+function isStudentNo(str) {
+    var reg=/^[0-9]{8}$/;   /*定义验证表达式*/
+    return reg.test(str);     /*进行验证*/
+}
+
+/*校验电话码格式 */
+function isTelCode(str) {
+    var reg= /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+    return reg.test(str);
+}
+
+/*校验邮件地址是否合法 */
+function IsEmail(str) {
+    var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    return reg.test(str);
+}
+function check() {
+    let f = document.getElementById("ff");
+    f.checkValidity()
+    f.setCustomValidity()
+    if (navigator.cookieEnabled === true) {
+        alert("cookie");
+    } else {
+
+    }
+}
+//鼠标离开
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me";
+}
+//鼠标放在上面
+function mOver(obj) {
+    obj.innerHTML = "Thank you";
+}
+//鼠标点击
+function mDowm(obj) {
+    obj.innerHTML = "Release Me";
+    obj.style.background = "yellow";
+
 }

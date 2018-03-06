@@ -11,3 +11,11 @@ img {
     display: block;
     margin-top: 5px;
 }
+div {
+    width: 200px;
+    height: 100px;
+    background-color: darkorange;
+    text-align: center;
+    /*文本行高(line-height)和所在区域高度(height)设为一致达到垂直居中的效果*/
+    line-height: 100px;
+}
